@@ -73,8 +73,10 @@ def main():
         quantity = result
         tax = calculate_tax(quantity)
         total_inventory = process_delivery(total_inventory, quantity)
+        history_list.append(quantity)
         deliveries_processed += 1
         print(f"Delivery accepted: {quantity} units | Tax on this delivery: {tax:.2f}")
+        print(history_list)
 
 
 if __name__ == "__main__":
